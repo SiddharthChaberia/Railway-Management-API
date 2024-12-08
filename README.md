@@ -10,6 +10,10 @@ cd Railway-Management-API
 ```bash
 docker build -t railway-management-api .
 ```
+Initialize the DB manually following the schema.sql file, or using the following command in your terminal
+```bash
+python initializeDB.py
+```
 ```bash
 docker run -d -p 5000:5000 --name railway-api railway-management-api
 ```
@@ -35,9 +39,9 @@ Skip to the 'Testing The API' part.
     - ensure you have latest version of MySQL (8.0) on your device installed and ready to connect
     - check the schema.sql file and set your database accordingly
     - alternatively, you can just run the following program in your cmd to initialize your database with the required configurations
-    ```bash
-    python initializeDB.py
-    ```
+       ```bash
+       python initializeDB.py
+       ```
 5. For testing purpose, you can generate a 32-bit JWT token using the following command in your terminal:
    ```bash
    python JWTTokenGen.py
